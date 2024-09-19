@@ -1,4 +1,4 @@
-public class Uczen extends Osoba {
+public class Uczen extends Osoba implements Dyzurny{
 //dziedziczenie dziedziczymy wszystko publiczne i chronione
     private int nrEwidencyjny;
     public static int liczbaUczniow = 0;
@@ -14,5 +14,10 @@ public class Uczen extends Osoba {
                 "imie:"+getImie()+
                 "nazwisko:"+getNazwisko()+
                 "nrEwidencyjny=" + nrEwidencyjny;
+    }
+
+    @Override
+    public void wykonajDyzur() {
+        System.out.println("Ścieram tablicę");
     }
 }
